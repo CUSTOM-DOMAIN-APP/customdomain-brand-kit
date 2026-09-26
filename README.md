@@ -1,139 +1,173 @@
-# Custom Domain Brand Kit
+# CustomDomain™ Brand Kit
 
-The logo, wordmark and colour tokens behind customdomain.ai, and the rules for using them.
+The name rule, mark, color tokens and type behind customdomain.ai, and the rules for using them.
 
-> [!NOTE]
-> New repository, opened 2026-09-04. This README is the specification and it is complete and
-> current. The vector sources are not committed here yet, so the inventory below says where
-> each asset lives today.
+**Status:** Specification committed (README and IDENTITY.md) · asset files not committed yet · public
 
-**Status:** Specification committed · vector sources pending · public
+[![docs](https://img.shields.io/badge/docs-docs.customdomain.ai-1c1917?style=flat)](https://docs.customdomain.ai/docs)
+[![license](https://img.shields.io/badge/license-all%20rights%20reserved-1c1917?style=flat)](#license)
+
+[Website](https://customdomain.ai) · [Docs](https://docs.customdomain.ai/docs) · [Console](https://app.customdomain.ai) · [Brand page](https://customdomain.ai/brand) · [IDENTITY.md](./IDENTITY.md)
 
 |  |  |
 |---|---|
-| **What it is** | The canonical brand reference for Custom Domain: mark, wordmark, colour and type |
-| **Who it's for** | Anyone putting the Custom Domain name or mark on a surface, inside the company or out |
-| **Live at** | [customdomain.ai](https://customdomain.ai) · [github.com/CUSTOM-DOMAIN-APP](https://github.com/CUSTOM-DOMAIN-APP) |
-| **Stack** | Markdown spec · CSS custom properties · Inter · PNG masters, no SVG yet |
-| **Status** | Tokens transcribed from the shipped site theme and re-verified 2026-09-04 |
+| **What it is** | The canonical brand reference for CustomDomain™: name, mark, color and type |
+| **Who it's for** | Anyone putting the CustomDomain™ name or mark on a surface, inside the company or out |
+| **Live at** | [customdomain.ai/brand](https://customdomain.ai/brand) · [github.com/CUSTOM-DOMAIN-APP](https://github.com/CUSTOM-DOMAIN-APP) |
+| **Stack** | Markdown spec · CSS custom properties · Instrument Serif, Inter, Geist Mono · SVG and PNG masters in the design source, not committed yet |
+| **Status** | Values checked against the live brand page and its tokens on 2026-09-26 |
 
-Custom Domain is the product that lets a platform's users connect a domain they own. Its
-identity is a dark one: near-black ink, a single purple, and Inter set tight. Everything on
-this page is what actually ships today, not an aspiration, which is the only way a brand
-reference stays worth opening.
+CustomDomain™ is the product that lets a platform's users connect a domain they own. Its identity is a quiet,
+warm one: near-black ink on paper, stone neutrals, an oak for a mark, one green kept for status, and three
+typefaces. Everything on this page is what ships today on the brand page, the console and the hosted widget,
+not an aspiration, which is the only way a brand reference stays worth opening.
 
 ## Why it exists
 
-The identity was captured from a Framer build and rebuilt in React, and the tokens landed in a
-theme file inside the marketing site. That made the site correct and left everything else
-guessing. A slide deck, a GitHub badge, a partner one-pager and an in-product empty state were
-each picking their own purple, and two different greys were both being called "the background".
+The identity has one written source of record, [IDENTITY.md](./IDENTITY.md), and one public page that renders
+it, [customdomain.ai/brand](https://customdomain.ai/brand). Everything else (a slide deck, a GitHub badge, a
+partner one-pager, an in-product empty state) ends up picking its own values unless something short and
+current tells it what to use. An earlier version of this kit described a dark purple theme that no longer
+ships anywhere; this version describes the stone palette that does.
 
-One page that a person can read in ninety seconds settles that. Everything below is a value you
-can copy or a rule short enough to remember, and every one of them was read off something that
-is live rather than out of a deck.
+One page that a person can read in ninety seconds settles that. Everything below is a value you can copy or a
+rule short enough to remember, and every one of them was read off something that is live rather than out of a
+deck.
 
-A brand kit earns its keep in the moments nobody plans for: a partner asks for a logo an hour
-before their launch post, a conference wants a mark for the sponsor wall, an engineer needs the
-right green for a status pill at eleven at night. Each of those is a small decision that gets
-made either from this page or from a screenshot. This page is cheaper and it is right.
+A brand kit earns its keep in the moments nobody plans for: a partner asks for a logo an hour before their
+launch post, a conference wants a mark for the sponsor wall, an engineer needs the right green for a status
+pill at eleven at night. Each of those is a small decision that gets made either from this page or from a
+screenshot. This page is cheaper and it is right.
 
 ## What it covers
 
-- **The name.** *Custom Domain*, two words, title case. Never "Connect Domain", never one word in prose. The domain is `customdomain.ai` and stays one word because it is a hostname.
-- **The lockup.** The mark, then a `2.5` gap, then the wordmark at 15px / 600 weight with `-0.01em` tracking, in white.
-- **Colour.** Four brand values, four primitives, and the surface and border alphas that build every card.
-- **Type.** Inter for everything, with a monospace treatment reserved for values a developer types.
-- **Contrast and focus.** The one accessibility fact worth memorising and the focus ring that depends on it.
-- **Asset inventory.** Where each file lives right now, and which ones do not exist yet.
+- **The name.** *CustomDomain™*: one word, capital C and D, with the ™. The generic concept stays lowercase ("a custom domain"), and `customdomain.ai` stays lowercase because it is a hostname. Never "Connect Domain".
+- **The mark.** An oak, in two constructions: flat for lockups and favicons, grounded for app icons and BIMI.
+- **Color.** Ink on paper, stone neutrals for text and surfaces, and one green that means "live" and nothing else.
+- **Type.** Instrument Serif for headlines, Inter for interface text and the wordmark, Geist Mono for facts and values.
+- **Usage rules.** What not to do with the name and the mark.
+- **Asset inventory.** Where each file lives today, and why none are committed here yet.
 
 ## Quickstart
 
-Paste the tokens. They are declared on `[data-theme="cd"]` in the shipped site and work as
-plain custom properties anywhere:
+Paste the tokens. They are published at
+[customdomain.ai/brand/tokens.css](https://customdomain.ai/brand/tokens.css) and work as plain custom
+properties anywhere:
 
 ```css
 :root {
-  /* Brand */
-  --cd-purple:    #6d3fea;  /* buttons, active nav, ambient glow */
-  --cd-lavender:  #a492ed;  /* eyebrow rules, links, focus ring, gradient terminus */
-  --cd-green:     #34d399;  /* live and verified states */
-  --cd-orange:    #f6821f;  /* warning, and the provider accent */
-
-  /* Primitives */
-  --ink:          #020010;  /* page background, near-black and blue-shifted */
-  --snow:         #f7f7fa;
-  --white:        #ffffff;  /* primary text */
-  --danger:       #f2555a;
-
-  /* Surfaces are white at low alpha over ink, never a lighter grey */
-  --surface:      rgba(255, 255, 255, 0.04);
-  --border:       rgba(255, 255, 255, 0.10);
-  --separator:    rgba(255, 255, 255, 0.08);
-  --muted:        rgba(255, 255, 255, 0.55);
-
-  /* Geometry */
-  --radius:       1rem;     /* cards */
-  --field-radius: 999px;    /* inputs, chips, pills */
+  --cd-ink: #1c1917;
+  --cd-ink-soft: #44403c;
+  --cd-muted: #6f6862;
+  --cd-faint: #a8a29e;
+  --cd-paper: #faf8f5;
+  --cd-paper-2: #f4f1ec;
+  --cd-card: #ffffff;
+  --cd-line: #e7e5e4;
+  --cd-line-soft: #efece7;
+  --cd-live: #15803d;
+  --cd-live-bg: #f0f7f1;
+  --cd-accent: #0f6b33;
+  --cd-warn: #b91c1c;
+  --cd-warn-bg: #fbf2f1;
+  --cd-btn: #1c1917;
+  --cd-btn-ink: #faf8f5;
+  --cd-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --cd-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cd-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --cd-wrap: 1120px;
+  --cd-radius: 14px;
+  --cd-shadow: 0 1px 2px rgba(28,25,23,.04), 0 12px 40px -18px rgba(28,25,23,.22);
 }
 ```
 
-The public product imagery is committed in the organisation profile repo and can be pulled
-directly:
+The same values as JSON, and the mark itself, straight from the brand page:
 
 ```bash
-curl -O https://raw.githubusercontent.com/CUSTOM-DOMAIN-APP/.github/main/assets/provider-logos.png
-curl -O https://raw.githubusercontent.com/CUSTOM-DOMAIN-APP/.github/main/assets/connect-flow-demo.gif
+curl -O https://customdomain.ai/brand/tokens.json
+curl -O https://customdomain.ai/brand/cd-mark-ink.svg     # the flat oak, ink, 512×512
 ```
 
 ## Design tokens
 
-**Type.** Inter, one family, bound to `--font-sans`. The monospace stack is
-`ui-monospace, SFMono-Regular, Menlo, monospace`, used only for values a developer types or
-receives: domains, record types, endpoints, statuses. Shipped scale: hero 60 to 72px / 500,
-section heading 30px / 500, card title 17px / 600, body 16px / 400 to 500, meta 14px / 400,
-eyebrow 12px / 500 uppercase with wide tracking.
+**Color.** Ink `#1c1917` carries body text, the logo on light surfaces, and buttons. Ink soft `#44403c` is
+secondary body text, Muted `#6f6862` is eyebrows and captions, and Faint `#a8a29e` is placeholders only. Pages
+sit on Paper `#faf8f5`, alternating bands on Paper 2 `#f4f1ec`, raised surfaces on Card `#ffffff`, and rules
+are Line `#e7e5e4`. Live `#15803d` is for status only, with Accent `#0f6b33` as its hover. Warn `#b91c1c` means
+failure. The full table, with roles, is section 3 of [IDENTITY.md](./IDENTITY.md).
 
-**Depth.** The design reads flat. Depth comes from a radial purple glow, not a drop shadow.
-Surface shadows are explicitly zero; only floating overlays carry one.
+**Type.** Three faces, all loaded from Google Fonts on the live site:
 
-**Contrast.** Lavender measures 7.83:1 against ink, which is why it carries the focus ring:
-`2px solid var(--cd-lavender)` with a `2px` offset. Do not swap the focus ring to purple, which
-does not clear the same bar.
+| Use | Face | Stack |
+|---|---|---|
+| Headlines only | Instrument Serif Regular | `"Instrument Serif", Georgia, "Times New Roman", serif` |
+| Interface and body | Inter | `"Inter", system-ui, -apple-system, "Segoe UI", sans-serif` |
+| Facts, hex values, domains, records | Geist Mono | `"Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace` |
+| Wordmark | Inter SemiBold 600, all caps, +0.18em tracking | |
 
-**Gradients.** Three recur: an eyebrow rule,
-`linear-gradient(90deg, transparent 0%, #a492ed 100%)`; an ambient glow,
-`radial-gradient(50% 50%, #6d3fea 0%, transparent 100%)`; and a headline sheen,
-`linear-gradient(128deg, #ffffff 4%, #a492ed 46%)`, clipped to text.
+**The mark.** An oak. The flat construction (lockups, favicon) is a six-circle canopy, a rounded trunk 36×150
+with rx 18, and two-stroke roots on a 512×512 artboard. The grounded construction (app icon, BIMI) keeps the
+canopy language and adds a horizon stroke at y=302 and a three-root flare. The mark is `#1c1917` on paper and
+`#fafaf9` on ink.
+
+**Geometry.** Content width 1120px, radius 14px, and one soft shadow for raised surfaces (`--cd-shadow` above).
 
 ## Asset inventory and layout
 
+The masters exist in the design source and the public set is downloadable from the brand page. None are
+committed here yet, because the wordmark and lockup files still carry the retired two-word name; they will be
+committed once they are redrawn, so this repository never ships the old name.
+
 | Asset | Where it lives today | State |
 |---|---|---|
-| `logo-glyph.png` | Marketing site, `public/brand/` (private repo in this org) | White on transparent, 256px tall. Crisp at lockup sizes, not for display sizes |
-| `logo-mark.png` | Marketing site, `public/brand/` (private repo in this org) | The mark with its plate |
-| Logo lockup component | Marketing site, `components/ui/logo.tsx` (private repo in this org) | The reference implementation of the spacing above |
-| `provider-logos.png` | `.github` repo, `assets/` (public) | The supported provider wall |
-| `connect-flow-demo.gif` | `.github` repo, `assets/` (public) | 3.5 MB. Copy it, never hotlink it |
-| Product screenshots | `.github` repo, `assets/` (public) | `app-connect-domain.jpg`, `app-domain-live.jpg` |
-| Vector masters | Nowhere | No SVG exists for the mark or the wordmark |
+| Oak mark, flat and grounded (SVG, PNG 128 to 1024) | Design source; public on [customdomain.ai/brand](https://customdomain.ai/brand) | Current |
+| App icon (ink and paper), favicon (SVG, PNG 16 and 32), BIMI | Design source; public on the brand page | Current |
+| Wordmarks (caps, serif), horizontal and stacked lockups, endorsement line | Design source; public on the brand page | Set the retired two-word name; being redrawn |
+| Tokens, `tokens.css` and `tokens.json` | [customdomain.ai/brand/tokens.css](https://customdomain.ai/brand/tokens.css), [tokens.json](https://customdomain.ai/brand/tokens.json) | Current; transcribed above |
+| Written spec | [IDENTITY.md](./IDENTITY.md) in this repository | Current; the copy on the brand page still has the old name rule |
+| Social covers, avatars, product shots | Design source; some public on the brand page | Not committed here |
+| Provider wall, demo capture, console screenshots | [`.github` repo, `assets/`](https://github.com/CUSTOM-DOMAIN-APP/.github/tree/main/assets) (public) | `connect-flow-demo.gif` is 3.5 MB: copy it, never hotlink it |
+
+The design source also holds a green variant of the mark (`cd-mark-live.svg`, `#15803d`). It is not on the brand
+page and it contradicts the "never green" rule, so do not use it as the logo.
 
 ## Usage rules
 
-- Set the mark on ink or on a dark photograph. There is no approved light-background lockup because there is no dark version of the mark.
-- Do not recolour, rotate, outline or add effects to the mark, and do not rebuild the wordmark in another face.
-- Shields.io badges across this organisation use ink `1c1917`, which is a GitHub-surface convention rather than a brand colour. It is deliberate and it stays.
-- Product names in this family are written on their own terms: **Custom Domain**, **Custom Agents**, **CustomPortal**, **JustMail**.
+- Write the name as **CustomDomain™** every time the product is meant: one word, capital C and D, with the ™. Never "Custom Domain", "Customdomain" or "CUSTOM DOMAIN" as the name.
+- Until the wordmark is redrawn, do not use the current wordmark, lockup or endorsement files to write the product name; they set the retired two-word name.
+- The oak is ink on paper or `#fafaf9` on ink. Never green, never a second color, never an outline.
+- Do not recolor, rotate, outline or add effects to the mark, and do not redraw it.
+- Green `#15803d` means live status and nothing else. It is not a brand accent for decoration.
+- Instrument Serif is for headlines. It is not the wordmark and not body text.
+- The brand page files may be used for accurate reference to CustomDomain™. Do not redraw them, and do not imply a partnership that has not been announced.
+- Shields.io badges across this organization use ink `1c1917` in the flat style, which is also the brand ink.
+- Product names in this family are written on their own terms: **CustomDomain™**, **Custom Agents**, **CustomPortal**, **JustMail**.
 
 ## Limitations
 
-- **No SVG master.** Every mark in circulation descends from a 256px PNG, which caps the largest clean rendering at roughly lockup size. Anything larger than a nav bar needs a redraw first.
-- **No build script.** Derived assets are produced by hand today. A generator is the reason this repo exists, and it is not written.
-- **Two palettes are live.** The product ships the dark ink and purple theme; GitHub surfaces and the App registration page ship a warm stone palette (`#faf9f7`, `#1c1917`, `#57534e`). Both are intentional today. Reconciling them is an open decision, not a bug to fix quietly.
+- **The wordmark carries the retired name.** Every drawn wordmark and lockup still sets "CUSTOM DOMAIN" or "Custom Domain". They are being redrawn; until then this kit publishes the name rule and the mark, not a wordmark for the new name.
+- **No assets committed yet.** The SVG and PNG masters live in the design source and on the brand page. They arrive here with the redrawn wordmark.
+- **No build script in this repository.** The script that renders the PNG sizes and the download bundle from the SVG masters lives with the design source and is not committed.
+- **The brand page lags this repository on the name.** customdomain.ai/brand and the IDENTITY.md it serves still state the two-word name rule. Until the page is updated, the rule in this repository is the current one.
+
+## Related
+
+- [.github](https://github.com/CUSTOM-DOMAIN-APP/.github): the organization profile and the public product imagery in `assets/`
+- [docs](https://github.com/CUSTOM-DOMAIN-APP/docs): the CustomDomain™ documentation source, rendered at [docs.customdomain.ai](https://docs.customdomain.ai/docs)
+- [customdomain-sdk](https://github.com/CUSTOM-DOMAIN-APP/customdomain-sdk): the browser SDK and the embeddable widget it opens
+
+## Support
+
+- **Docs:** [docs.customdomain.ai](https://docs.customdomain.ai/docs)
+- **Questions and ideas:** [GitHub Discussions](https://github.com/CUSTOM-DOMAIN-APP/docs/discussions)
+- **Bugs and corrections:** [open an issue](https://github.com/CUSTOM-DOMAIN-APP/customdomain-brand-kit/issues) on this repository
+- **Service status:** [status.customdomain.ai](https://status.customdomain.ai)
+- **Account and billing:** connect@customdomain.ai
+- **Security:** report privately to security@customdomain.ai, never in a public issue. Policy: [app.customdomain.ai/security](https://app.customdomain.ai/security)
 
 ## License
 
-The Custom Domain name, wordmark and logo mark are trademarks of CustomDomain.ai. No open
-source licence applies to the assets: all rights reserved. The colour values, type scale and
-usage rules on this page are published so that partners and press can represent the product
-correctly, and may be quoted for that purpose. For anything else, ask first.
+No open source license applies to the assets or to this specification: all rights reserved. The CustomDomain™
+name, the oak mark and the wordmark are trademarks of EverJust Company. The color values, type scale and usage
+rules on this page are published so that partners and press can represent the product correctly, and may be
+quoted for that purpose. For anything else, ask first. CustomDomain™ is a product of EverJust Company.
