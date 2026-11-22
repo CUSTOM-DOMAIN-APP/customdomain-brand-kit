@@ -2,7 +2,7 @@
 
 The name rule, mark, color tokens and type behind customdomain.ai, and the rules for using them.
 
-**Status:** Specification committed (README and IDENTITY.md) · asset files not committed yet · public
+**Status:** Specification committed (README and IDENTITY.md) · widget pictures in [`github/`](github/) · mark masters not committed yet · public
 
 [![docs](https://img.shields.io/badge/docs-docs.customdomain.ai-1c1917?style=flat)](https://docs.customdomain.ai/docs)
 [![license](https://img.shields.io/badge/license-all%20rights%20reserved-1c1917?style=flat)](#license)
@@ -46,7 +46,25 @@ screenshot. This page is cheaper and it is right.
 - **Color.** Ink on paper, stone neutrals for text and surfaces, and one green that means "live" and nothing else.
 - **Type.** Instrument Serif for headlines, Inter for interface text and the wordmark, Geist Mono for facts and values.
 - **Usage rules.** What not to do with the name and the mark.
-- **Asset inventory.** Where each file lives today, and why none are committed here yet.
+- **Asset inventory.** Where each file lives today; the widget pictures are the ones committed here.
+
+## Widget pictures
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="github/widget-flow-dark.png"><img src="github/widget-flow-light.png" alt="The CustomDomain widget: your user types their domain, signs in at their provider, and it goes live" width="860"></picture></p>
+
+Rendered from the real widget, for READMEs and press. The PNGs are at 2x: show them at half their pixel width.
+Each repo copies the ones it uses into its own `.github/media/`. Details and sizes: [github/README.md](github/README.md).
+
+| Light | Dark | What it shows |
+|---|---|---|
+| [`widget-flow-light.png`](github/widget-flow-light.png) | [`widget-flow-dark.png`](github/widget-flow-dark.png) | The five core panes side by side: Domain, Connect, Review, Working, Done |
+| [`widget-hero-light.png`](github/widget-hero-light.png) | [`widget-hero-dark.png`](github/widget-hero-dark.png) | The widget open on the Connect pane over a sample host app |
+| [`widget-phone-light.png`](github/widget-phone-light.png) | [`widget-phone-dark.png`](github/widget-phone-dark.png) | Three phone frames with the mobile sheet on Domain, Connect and Done |
+| [`widget-card-light.png`](github/widget-card-light.png) | [`widget-card-dark.png`](github/widget-card-dark.png) | One Connect card on a transparent background, the small README picture |
+| [`widget-providers.png`](github/widget-providers.png) |  | The Connect pane for three DNS providers, each with its own button |
+| [`widget-languages.png`](github/widget-languages.png) |  | The Domain pane in English, German, Japanese and Spanish |
+| [`providers-strip.png`](github/providers-strip.png) | [`providers-strip-dark.png`](github/providers-strip-dark.png) | DNS provider logos in one strip |
+| [`customdomain-mark.png`](github/customdomain-mark.png) | [`customdomain-mark-dark.png`](github/customdomain-mark-dark.png) | The CustomDomain™ mark, 256 px |
 
 ## Quickstart
 
